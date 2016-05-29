@@ -25,7 +25,7 @@
 			Velocity(document.getElementById('player'), {width: $_GET('done') + '%'}, 1000);
 			Velocity(document.getElementById('level'), {left: (parseInt($_GET('done')) + 1) + '%'}, 1000);
 
-			document.getElementById('score').innerHTML = (new Intl.NumberFormat('de-DE').format($_GET('score'))) + ' point' + ($_GET('score') > 1 ? 's' : '') + (parseInt(best) == parseInt($_GET('score')) ? ' <span id="highscore">High Score</span>' : '');
+			document.getElementById('score').innerHTML = (new Intl.NumberFormat('de-DE').format($_GET('score'))) + ' point' + ($_GET('score') > 1 ? 's' : '') + (parseInt(best) == parseInt($_GET('score')) ? ' <span id="highscore">New high Score</span>' : '');
 			document.getElementById('obs').textContent = $_GET('obs') + ' obstacle' + ($_GET('obs') > 1 ? 's' : '') + ' avoided';
 
 			var a = 0.3;

@@ -18,11 +18,10 @@ Ouvrir le fichier __```nw.exe```__.
 
 **Objectif** : aller le plus loin possible en évitant les obstacles de diverses tailles.
 Pour cela, il vous est possible de choisir entre trois sauts :
-Petit avec la touche **A** ![Petit saut](/core/res/low.png "Petit saut")
 
-Modéré avec la touche **Z** ![Saut moyen](/core/res/medium.png "Saut moyen")
-
-Grand avec la touche **E** ![Grand saut](/core/res/high.png "Grand saut")
+1.	Petit avec la touche **A**
+2.	Modéré avec la touche **Z**
+3.	Grand avec la touche **E**
 
 ## Environnement
 
