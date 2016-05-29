@@ -1,0 +1,70 @@
+@font-face {
+	font-family: 'Aldrich';
+	src: url('font/Aldrich.ttf');
+}
+
+@font-face {
+	font-family: 'Trickax';
+	src: url('font/Trickax.otf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+	opacity: 0;
+	overflow: hidden;
+	top: -310px;
+}
+
+hr {
+	position: absolute;
+	top: 300px;
+	left: 0;
+	width: 100%;
+	border-color: #505061;
+}
+
+#player {
+	position: absolute;
+	top: 280px;
+	left: 100px;
+	height: 20px;
+	width: 20px;
+	background: #9BF4AA;
+}
+
+.enemy {
+	position: absolute;
+	top: 280px;
+	width: 20px;
+	height: 20px;
+}
+
+header {
+	position: absolute;
+	right: 40px;
+	top: 30px;
+	display: inline-block;
+	font-family: 'Aldrich';
+	text-align: right;
+}
+
+.score {
+	font-size: 25px;
+	font-weight: bold;
+	color: #E84C3D;
+}
+
+#bestScore {
+	position: relative;
+	top: 15px;
+	text-align: center;
+	font-family: 'Trickax';
+	font-weight: bold;
+	font-size: 80px;
+	color: #505061;
+}

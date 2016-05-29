@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Procul</title>
+		<link rel="stylesheet" type="text/css" href="statistique.css">
+	</head>
+	<body>
+		<div id="level"></div>
+		<div id="player"></div>
+		<hr>
+
+		<span id="score"></span>
+		<span id="obs"></span>
+
+		<footer>Press <i>SPACE BAR</i> to start a new game</footer>
+
+		<script type="text/javascript" src="velocity.js"></script>
+		<script type="text/javascript" src="get.js"></script>
+		<script type="text/javascript">
+			var best = (parseInt($_GET('best')) > parseInt($_GET('score')) ? $_GET('best') : $_GET('score'));
+			Velocity(document.body, {opacity: 1}, 1000);
+			document.getElementById('level').textContent = $_GET('done') + '% traveled';
+
+			Velocity(document.getElementById('player'), {width: $_GET('done') + '%'}, 1000);
+			Velocity(document.getElementById('level'), {left: (parseInt($_GET('done')) + 1) + '%'}, 1000);
+
+			document.getElementById('score').innerHTML = (new Intl.NumberFormat('de-DE').format($_GET('score'))) + ' point' + ($_GET('score') > 1 ? 's' : '') + (parseInt(best) == parseInt($_GET('score')) ? ' <span id="highscore">High Score</span>' : '');
+			document.getElementById('obs').textContent = $_GET('obs') + ' obstacle' + ($_GET('obs') > 1 ? 's' : '') + ' avoided';
+
+			var a = 0.3;
+			setInterval(function(){
+				Velocity(document.getElementsByTagName('footer')[0], {opacity: a}, 700);
+				a = (a == 0.3 ? 1 : 0.3);
+			}, 700);
+
+			window.addEventListener('keydown', function(e){
+				if(e.keyCode == 32){
+					location.href = 'game.html?best=' + best;
+				}
+			});
+		</script>
+	</body>
+</html>
